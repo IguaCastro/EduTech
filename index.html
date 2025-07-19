@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech - Plataforma Educativa de Informática y Redes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <span class="tech-text">Edu</span><span class="highlight">Tech</span>
+            </h1>
+            <p class="subtitle">Plataforma Educativa de Informática y Redes</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Aprende Tecnología del Futuro</h2>
+            <p>Explora los módulos educativos más importantes para tu carrera en informática y redes</p>
+        </section>
+
+        <section class="modules-grid">
+            <div class="module-card" data-module="ciberseguridad">
+                <div class="module-icon">🔒</div>
+                <h3>Ciberseguridad</h3>
+                <p>Aprende sobre protección de datos, malware, criptografía y mejores prácticas de seguridad.</p>
+                <button class="module-btn" onclick="openModule('ciberseguridad')">Ver Contenido</button>
+            </div>
+
+            <div class="module-card" data-module="sistemas">
+                <div class="module-icon">💻</div>
+                <h3>Sistemas Operativos</h3>
+                <p>Domina Windows, Linux y macOS. Procesos, memoria y administración de sistemas.</p>
+                <button class="module-btn" onclick="openModule('sistemas')">Ver Contenido</button>
+            </div>
+
+            <div class="module-card" data-module="redes">
+                <div class="module-icon">🌐</div>
+                <h3>Redes de Computadoras</h3>
+                <p>IPv4, IPv6, TCP/IP, DNS, routing y switching. Fundamentos de conectividad.</p>
+                <button class="module-btn" onclick="openModule('redes')">Ver Contenido</button>
+            </div>
+
+            <div class="module-card" data-module="programacion">
+                <div class="module-icon">📝</div>
+                <h3>Lenguajes de Programación</h3>
+                <p>HTML, CSS, Python, JavaScript. Sintaxis, mejores prácticas y desarrollo web.</p>
+                <button class="module-btn" onclick="openModule('programacion')">Ver Contenido</button>
+            </div>
+
+            <div class="module-card" data-module="servidores">
+                <div class="module-icon">⚙️</div>
+                <h3>Administración de Servidores</h3>
+                <p>Configuración, mantenimiento y optimización de servidores web y de aplicaciones.</p>
+                <button class="module-btn" onclick="openModule('servidores')">Ver Contenido</button>
+            </div>
+
+            <div class="module-card" data-module="protocolos">
+                <div class="module-icon">🔗</div>
+                <h3>Protocolos de Red</h3>
+                <p>HTTP/HTTPS, FTP, SMTP, SSH y otros protocolos esenciales de comunicación.</p>
+                <button class="module-btn" onclick="openModule('protocolos')">Ver Contenido</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para contenido de módulos -->
+    <div id="module-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModule()">&times;</span>
+            <div id="modal-body">
+                <!-- Contenido dinámico se carga aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <div class="chatbot-header">
+            <h4>🤖 Asistente Virtual</h4>
+            <button id="toggle-chat" onclick="toggleChat()">−</button>
+        </div>
+        <div id="chat-container">
+            <div id="chat-history">
+                <div class="mensaje-bot">¡Hola! Soy tu asistente virtual. Pregúntame sobre cualquier tema de informática y redes.</div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Escribe tu pregunta aquí...">
+                <button id="chat-send">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EduTech - Plataforma Educativa. Desarrollado para estudiantes de informática y redes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
